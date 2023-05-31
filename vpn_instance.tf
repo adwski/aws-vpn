@@ -1,6 +1,6 @@
 resource "aws_instance" "vpn" {
   ami           = "ami-0ec7f9846da6b0f61" # Ubuntu Server 22.04 LTS (HVM),EBS General Purpose (SSD) Volume Type.
-  instance_type = "t2.micro"
+  instance_type = "t2.nano"
 
   network_interface {
     network_interface_id = aws_network_interface.vpn.id
