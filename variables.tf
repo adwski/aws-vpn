@@ -10,4 +10,11 @@ variable "vpn_instance_type" {}
 
 variable "public_key" {}
 
-variable "openvpn_port" {}
+variable "udp_ports" {
+    type = set(string)
+    default = []
+}
+variable "tcp_ports" {
+    type = set(string)
+    default = []
+}
