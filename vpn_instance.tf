@@ -37,7 +37,6 @@ resource "aws_network_interface" "vpn" {
 
 # Public IP
 resource "aws_eip" "vpn" {
-  vpc                       = true
   network_interface         = aws_network_interface.vpn.id
   associate_with_private_ip = "${var.vpn_instance_ip}"
 }
